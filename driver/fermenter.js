@@ -37,9 +37,9 @@ setTimeout(()=> {
     multi = new AM2320();
 
   	// Define variables
-  	circ_pump = new five.Pin('GPIO20');
-  	doser = new five.Pin('GPIO26');
-  	heater = new five.Pin('GPIO21');
+  	circ_pump = new five.Pin('GPIO26');
+  	doser = new five.Pin('GPIO21');
+  	heater = new five.Pin('GPIO20');
 
     let bioreactor = new Grow({
       uuid: 'meow',
