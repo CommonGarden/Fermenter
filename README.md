@@ -1,10 +1,12 @@
 # Install on Raspberry Pi
 
-Clone the repo, then:
+Make sure you have Node.js installed on your pi.
+
 ```bash
-cd driver
+https://github.com/CommonGarden/BioReactor
+cd BioReactor/driver
 npm install
-sudo node bioreactor.js
+sudo node fermenter.js
 ```
 
 # Hardware setup / Bill of materials.
