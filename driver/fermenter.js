@@ -4,7 +4,6 @@ const five = require('johnny-five');
 const later = require('later');
 const _ = require('underscore');
 const spawn = require('child_process').spawn;
-const AM2320 = require('am2320');
 
 // Use local time, not UTC.
 later.date.localTime();
@@ -33,9 +32,6 @@ setTimeout(()=> {
 
   // When board emits a 'ready' event run this start function.
   board.on('ready', function start() {
-
-    multi = new AM2320();
-
   	// Define variables
   	circ_pump = new five.Pin('GPIO26');
   	doser = new five.Pin('GPIO21');
@@ -151,21 +147,18 @@ setTimeout(()=> {
             this.emit('water_temperature', Number(data.toString()));
           });
 
-          multi.readTemperature().then((temp)=> {
-            console.log('Temperature: ' + temp + ' degree');
-            this.emit('temperature', Number(temp));
-          });
-          multi.readHumidity().then((hum)=> {
-            console.log('Humidity: ' + hum + ' %');
-            this.emit('humidity', Number(hum));
+          let am2320 = spawn('python', ['am2320/am2320.py']);
+
+          am2320.stdout.on('data', (data)=> {
+            console.log(data);
           });
 
           this.circ_pump_on();
           setTimeout(()=> {
+            this.circ_pump_off();
             this.ph_data();
             this.orp_data();
             this.do_data();
-            this.circ_pump_off();
           }, 30000)
         }, interval);
 
