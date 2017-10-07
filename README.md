@@ -13,5 +13,5 @@ sudo node fermenter.js
 
 Item             | Quantity | Cost | Link
 -----------------|----------|------|------------------------------
-Raspberry Pi 3   | 1        | $35  | [buy here]()
-
+Raspberry Pi Model 3   | 1  | $35  | [buy here]()
+Relay Board | 1 | $23.99 | https://www.adafruit.com/product/3055?src=raspberrypi
