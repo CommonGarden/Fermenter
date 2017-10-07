@@ -170,7 +170,7 @@ setTimeout(()=> {
             this.ph_data();
             this.orp_data();
             this.do_data();
-          }, 4000)
+          }, 6000)
         // Interval should be at the lowest a minute.
         // circ_pump needs time to rest.
         }, interval >= 60000 ? interval: 60000);
