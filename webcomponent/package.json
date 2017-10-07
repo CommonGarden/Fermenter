@@ -1,0 +1,11 @@
+{
+  "name": "cg-bioreactor-component",
+  "version": "0.1.0",
+  "description": "UI component for Grow-IoT",
+  "main": "Bioreactor.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Common Garden",
+  "license": "MIT"
+}
