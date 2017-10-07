@@ -11,4 +11,7 @@ sudo node fermenter.js
 
 # Hardware setup / Bill of materials.
 
-TODO.
+Item             | Quantity | Cost | Link
+-----------------|----------|------|------------------------------
+Raspberry Pi 3   | 1        | $35  | [buy here]()
+
