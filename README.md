@@ -3,8 +3,10 @@
 Make sure you have Node.js and git installed on your pi.
 
 ```bash
+sudo apt-get update
+sudo apt-get install wiringpi
 git clone https://github.com/CommonGarden/Fermenter
-cd BioReactor/driver
+cd Fermenter/driver
 npm install
 sudo node fermenter.js
 ```
