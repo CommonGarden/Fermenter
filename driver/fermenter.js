@@ -48,7 +48,7 @@ setTimeout(()=> {
         doser: 'off',//3
         water_level: null,
         duration: 2000,
-        interval: 30000,
+        interval: 60000,
         threshold: 50,
         growfile: {
           name: 'Yeast',
@@ -147,7 +147,7 @@ setTimeout(()=> {
           let py = spawn('python', ['max31865.py']);
 
           py.stdout.on('data', (data)=> {
-            console.log("Temperature: " + data.toString());
+            console.log("Water temperature: " + data.toString());
             this.emit('water_temperature', Number(data.toString()));
           });
 
@@ -155,9 +155,13 @@ setTimeout(()=> {
 
           am2320.stdout.on('data', (data)=> {
             let readings = data.toString().split(' ');
-            console.log(readings);
-            this.emit('temperature', Number(readings[0]));
-            this.emit('humidity', Number(readings[1]));
+            // console.log(readings);
+            let temperature = Number(readings[0]);
+            let humidity = Number(readings[1].replace(/(\r\n|\n|\r)/gm,""));
+            console.log('Temperature: ' + temperature);
+            console.log('Humidity: ' + humidity)
+            this.emit('temperature', temperature);
+            this.emit('humidity', humidity);
           });
 
           this.circ_pump_on();
@@ -166,8 +170,10 @@ setTimeout(()=> {
             this.ph_data();
             this.orp_data();
             this.do_data();
-          }, 30000)
-        }, interval);
+          }, 4000)
+        // Interval should be at the lowest a minute.
+        // circ_pump needs time to rest.
+        }, interval >= 60000 ? interval: 60000);
 
         let growfile = this.get('growfile');
         this.startGrow(growfile);
@@ -205,7 +211,7 @@ setTimeout(()=> {
       },
       
       feed: function () {
-      	console.log('Feeding time!')
+      	console.log('Feeding time!');
       },
 
       day: function () {
@@ -228,23 +234,23 @@ setTimeout(()=> {
 
       circ_pump_on: function () {
         circ_pump.low();
+        console.log("circ_pump on")
         this.set('circ_pump', 'on');
       },
 
       circ_pump_off: function () {
         circ_pump.high();
+        console.log("circ_pump off")
         this.set('circ_pump', 'off');
       },
 
       heater_on: function () {
         heater.low();
-        console.log('on')
         this.set('heater', 'on');
       },
 
       heater_off: function () {
         heater.high();
-        console.log('off')
         this.set('heater', 'off');
       },
 
