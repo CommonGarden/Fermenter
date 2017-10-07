@@ -84,7 +84,7 @@ class max31865(object):
 		out = self.readRegisters(0,8)
 
 		conf_reg = out[0]
-		print "config register byte: %x" % conf_reg
+		# print "config register byte: %x" % conf_reg
 
 		[rtd_msb, rtd_lsb] = [out[1], out[2]]
 		rtd_ADC_Code = (( rtd_msb << 8 ) | rtd_lsb ) >> 1
@@ -93,11 +93,11 @@ class max31865(object):
 
 		[hft_msb, hft_lsb] = [out[3], out[4]]
 		hft = (( hft_msb << 8 ) | hft_lsb ) >> 1
-		print "high fault threshold: %d" % hft
+		# print "high fault threshold: %d" % hft
 
 		[lft_msb, lft_lsb] = [out[5], out[6]]
 		lft = (( lft_msb << 8 ) | lft_lsb ) >> 1
-		print "low fault threshold: %d" % lft
+		# print "low fault threshold: %d" % lft
 
 		status = out[7]
 		#
@@ -174,9 +174,9 @@ class max31865(object):
 		# c = -4.18301e-12 # for -200 <= T <= 0 (degC)
 		c = -0.00000000000418301
 		# c = 0 # for 0 <= T <= 850 (degC)
-		print "RTD ADC Code: %d" % RTD_ADC_Code
+		# print "RTD ADC Code: %d" % RTD_ADC_Code
 		Res_RTD = (RTD_ADC_Code * R_REF) / 32768.0 # PT100 Resistance
-		print "PT100 Resistance: %f ohms" % Res_RTD
+		# print "PT100 Resistance: %f ohms" % Res_RTD
 		#
 		# Callendar-Van Dusen equation
 		# Res_RTD = Res0 * (1 + a*T + b*T**2 + c*(T-100)*T**3)
@@ -189,11 +189,12 @@ class max31865(object):
 		temp_C = -(a*Res0) + math.sqrt(a*a*Res0*Res0 - 4*(b*Res0)*(Res0 - Res_RTD))
 		temp_C = temp_C / (2*(b*Res0))
 		temp_C_line = (RTD_ADC_Code/32.0) - 256.0
+		print temp_C
 		# removing numpy.roots will greatly speed things up
 		#temp_C_numpy = numpy.roots([c*Res0, -c*Res0*100, b*Res0, a*Res0, (Res0 - Res_RTD)])
 		#temp_C_numpy = abs(temp_C_numpy[-1])
-		print "Straight Line Approx. Temp: %f degC" % temp_C_line
-		print "Callendar-Van Dusen Temp (degC > 0): %f degC" % temp_C
+		# print "Straight Line Approx. Temp: %f degC" % temp_C_line
+		# print "Callendar-Van Dusen Temp (degC > 0): %f degC" % temp_C
 		#print "Solving Full Callendar-Van Dusen using numpy: %f" %  temp_C_numpy
 		if (temp_C < 0): #use straight line approximation if less than 0
 			# Can also use python lib numpy to solve cubic
