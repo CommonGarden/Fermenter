@@ -232,13 +232,13 @@ board.on('ready', function start() {
 
     circ_pump_on: function () {
       circ_pump.low();
-      console.log("circ_pump on")
+      // console.log("circ_pump on")
       this.set('circ_pump', 'on');
     },
 
     circ_pump_off: function () {
       circ_pump.high();
-      console.log("circ_pump off")
+      // console.log("circ_pump off")
       this.set('circ_pump', 'off');
     },
 
