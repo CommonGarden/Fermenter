@@ -170,6 +170,8 @@ setTimeout(()=> {
         // Turn the heater on or off. Gee, wouldn't it be nice to do this stuff with a gui?
         this.on('correction', (key, correction)=> {
           let heater_state = this.get('heater');
+          console.log("heater state: " + heater_state);
+          console.log('correction: ' + correction);
           if (correction > threshold) {
             if (heater_state === 'off') {
               this.heater_on();
