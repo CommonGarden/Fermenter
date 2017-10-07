@@ -151,10 +151,13 @@ setTimeout(()=> {
             this.emit('water_temperature', Number(data.toString()));
           });
 
-          let am2320 = spawn('python', ['am2320/am2320.py']);
+          let am2320 = spawn('python', ['am2320.py']);
 
           am2320.stdout.on('data', (data)=> {
-            console.log(data);
+            let readings = data.toString().split(' ');
+            console.log(readings);
+            this.emit('temperature', Number(readings[0]));
+            this.emit('humidity', Number(readings[1]));
           });
 
           this.circ_pump_on();
