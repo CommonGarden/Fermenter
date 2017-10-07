@@ -23,3 +23,17 @@ Atlas Scientific ORP Board | 1 | $38 | https://www.atlas-scientific.com/product_
 Atlas Scientific Dissolved Oxygen (DO) Probe | 1 | $198 | https://www.atlas-scientific.com/product_pages/probes/do_probe.html
 Atlas Scientific DO Board | 1 | $44 | https://www.atlas-scientific.com/product_pages/circuits/ezo_do.html
 
+
+## Images
+Compost Tea Brewer:
+![Compost Tea Brewer](https://user-images.githubusercontent.com/3916616/31311867-302da26a-ab6a-11e7-94c6-34defbc47ef5.jpg)
+
+Fermenter:
+![Fermenter](https://user-images.githubusercontent.com/3916616/31311866-302be5d8-ab6a-11e7-9963-6187714b8f64.jpg)
+
+Inside Control box:
+![Inside Control box](https://user-images.githubusercontent.com/3916616/31311864-302a24d2-ab6a-11e7-9593-81c027f5dcda.jpg)
+
+Compost Tea Brewer control box:
+![Compost Tea Brewer control box](https://user-images.githubusercontent.com/3916616/31311865-302a8634-ab6a-11e7-86b6-895c111c9780.jpg)
+
