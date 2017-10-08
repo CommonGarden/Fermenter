@@ -19,6 +19,8 @@ Raspberry Pi Model 3B   | 1  | $35  | https://www.adafruit.com/product/3055?src=
 Anker 24W USB Power Supply | 1 | $10.99 | https://www.amazon.com/Anker-Charger-PowerPort-PowerIQ-Foldable/dp/B071YMZ4LD
 3-Channel Relay Board for RPi| 1 | $23.99 | https://www.amazon.com/Waveshare-Board-Relay-Appliances-Intelligent/dp/B01FZ7XLJ4
 12VDC 2A Power Supply | 2 | $3.28 | https://www.aliexpress.com/item/YNL-EU-US-Plug-Power-Adapter-1A-2A-AC-110V-240V-to-DC-12V-for-3528/32815841532.html
+Water Pump | 1 | $19.99 | https://www.amazon.com/bayite-BYT-7A006-Circulation-Discharge-2-1GPM/dp/B0196WL55G/
+Peristaltic Pump | 1 | $6.01 | https://www.aliexpress.com/item/12V-DIY-Dosing-Pump-Peristaltic-Dosing-Head-For-Aquarium-Lab-A-Laborator-High-Standard-Lab-Analytical/32820693824.html
 Fermwrap 40W Fermentation Heater | 1 | $23.95 | https://www.amazon.com/dp/B00TP9MLFE/
 Tentacle T3 Board | 1 | $91 | https://www.whiteboxes.ch/shop/tentacle-t3-for-raspberry-pi/
 pH Probe | 1 | $7.39 | https://www.aliexpress.com/item/New-Arrival-PH-Electrode-Probe-BNC-Connector-for-Aquarium-PH-Controller-Meter-Sensor-gib-Best-Promotion/32781193789.html
