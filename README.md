@@ -1,6 +1,6 @@
 # Install on Raspberry Pi
 
-Make sure you have Node.js and git installed on your pi.
+Make sure you have git and Node.js >=6.0.0 installed on your pi.
 
 ```bash
 sudo apt-get update
@@ -14,6 +14,9 @@ sudo node fermenter.js
 # Hardware setup / Bill of materials.
 
 # Control Box
+Inside Control box:
+![Inside Control box](https://user-images.githubusercontent.com/3916616/31311864-302a24d2-ab6a-11e7-9593-81c027f5dcda.jpg)
+
 Item             | Quantity | Cost | Link
 -----------------|----------|------|------------------------------
 Raspberry Pi Model 3B   | 1  | $35  | https://www.adafruit.com/product/3055?src=raspberrypi
@@ -49,6 +52,9 @@ Fermwrap 40W Fermentation Heater | 1 | $23.95 | https://www.amazon.com/dp/B00TP9
 Water Pump (circulation) | 1 | $19.99 | https://www.amazon.com/bayite-BYT-7A006-Circulation-Discharge-2-1GPM/dp/B0196WL55G/
 
 # Vessel
+Fermenter:
+![Fermenter](https://user-images.githubusercontent.com/3916616/31311866-302be5d8-ab6a-11e7-9963-6187714b8f64.jpg)
+
 Item             | Quantity | Cost | Link
 -----------------|----------|------|------------------------------
 Fermonster 7Gal PET Carboy | 1 | $29.99 | https://www.morebeer.com/products/fermonster-7-gallon-carboy.html
@@ -74,12 +80,4 @@ Silicone Tubing - 6mm x 4mm | 4' | $? | ?
 Sanitary Air Filter | 1 | $2.75 | https://www.amazon.com/Sanitary-Filter-Ferroday-Fittings-Homebrew/dp/B07149NMRM/
 Silicone Tubing - 5/16" ID | 3" | ? | ? 
 Acrylic for plastic "cupholder" | 8"x10" | $6 | ?
-
-## Images
-Fermenter:
-![Fermenter](https://user-images.githubusercontent.com/3916616/31311866-302be5d8-ab6a-11e7-9963-6187714b8f64.jpg)
-
-Inside Control box:
-![Inside Control box](https://user-images.githubusercontent.com/3916616/31311864-302a24d2-ab6a-11e7-9593-81c027f5dcda.jpg)
-
 
