@@ -72,6 +72,8 @@ PVC Tee - 3/4" x 3/4" x 1/2" Slip/Slip/FPT | 3 | $0.97 | http://www.homedepot.co
 Probe Fitting | 3 | $2.66 | https://www.amazon.com/gp/product/B00TOOP8AU/
 
 # Feed/Dose Module
+![Doser module](https://user-images.githubusercontent.com/521978/31350657-d8236afe-acdc-11e7-8cbd-e6826b2f679a.jpg)
+
 Item             | Quantity | Cost | Link
 -----------------|----------|------|------------------------------
 500mL Media Bottle | 1 | $15.01 | https://www.amazon.com/PYREX-500mL-Round-Storage-Bottles/dp/B004XR5TUM
